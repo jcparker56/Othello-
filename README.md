@@ -1,1 +1,1 @@
-# Othello-
+# OthelloPlus
