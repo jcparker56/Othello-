@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="othello.css">
+
+  <title>OTHELLO</title>
+</head>
+
+</html>
+
+<body>
+  <H1>OTHELLO
+  </H1>
+  <div id="colorTurn">White Turn</div>
+  <div id="grid">
+    <div class="row">
+      <div class="cell" id="cell00" onclick="selectCell(0,0);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell01" onclick="selectCell(0,1);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell02" onclick="selectCell(0,2);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell03" onclick="selectCell(0,3);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell04" onclick="selectCell(0,4);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell05" onclick="selectCell(0,5);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell06" onclick="selectCell(0,6);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell07" onclick="selectCell(0,7);">
+        <div class="disc"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" id="cell10" onclick="selectCell(1,0);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell11" onclick="selectCell(1,1);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell12" onclick="selectCell(1,2);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell13" onclick="selectCell(1,3);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell14" onclick="selectCell(1,4);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell15" onclick="selectCell(1,5);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell16" onclick="selectCell(1,6);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell17" onclick="selectCell(1,7);">
+        <div class="disc"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" id="cell20" onclick="selectCell(2,0);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell21" onclick="selectCell(2,1);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell22" onclick="selectCell(2,2);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell23" onclick="selectCell(2,3);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell24" onclick="selectCell(2,4);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell25" onclick="selectCell(2,5);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell26" onclick="selectCell(2,6);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell27" onclick="selectCell(2,7);">
+        <div class="disc"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" id="cell30" onclick="selectCell(3,0);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell31" onclick="selectCell(3,1);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell32" onclick="selectCell(3,2);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell33" onclick="selectCell(3,3);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell34" onclick="selectCell(3,4);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell35" onclick="selectCell(3,5);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell36" onclick="selectCell(3,6);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell37" onclick="selectCell(3,7);">
+        <div class="disc"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" id="cell40" onclick="selectCell(4,0);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell41" onclick="selectCell(4,1);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell42" onclick="selectCell(4,2);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell43" onclick="selectCell(4,3);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell44" onclick="selectCell(4,4);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell45" onclick="selectCell(4,5);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell46" onclick="selectCell(4,6);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell47" onclick="selectCell(4,7);">
+        <div class="disc"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" id="cell50" onclick="selectCell(5,0);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell51" onclick="selectCell(5,1);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell52" onclick="selectCell(5,2);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell53" onclick="selectCell(5,3);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell54" onclick="selectCell(5,4);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell55" onclick="selectCell(5,5);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell56" onclick="selectCell(5,6);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell57" onclick="selectCell(5,7);">
+        <div class="disc"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" id="cell60" onclick="selectCell(6,0);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell61" onclick="selectCell(6,1);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell62" onclick="selectCell(6,2);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell63" onclick="selectCell(6,3);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell64" onclick="selectCell(6,4);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell65" onclick="selectCell(6,5);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell66" onclick="selectCell(6,6);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell67" onclick="selectCell(6,7);">
+        <div class="disc"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cell" id="cell70" onclick="selectCell(7,0);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell71" onclick="selectCell(7,1);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell72" onclick="selectCell(7,2);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell73" onclick="selectCell(7,3);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell74" onclick="selectCell(7,4);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell75" onclick="selectCell(7,5);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell76" onclick="selectCell(7,6);">
+        <div class="disc"></div>
+      </div>
+      <div class="cell" id="cell77" onclick="selectCell(7,7);">
+        <div class="disc"></div>
+      </div>
+    </div>
+  </div>
+  <div class="congrats-message"></div>
+  <div id='data-congrats-message-text'></div>
+  <input id="resetButton" type="button" value="Reset" onclick="refreshGrid()" /></br></br>
+  <script src="othello.js" defer></script>
+</body>

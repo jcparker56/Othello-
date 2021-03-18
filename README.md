@@ -1,1 +1,2 @@
-# OthelloPlus
+# Othello
+Othello V1

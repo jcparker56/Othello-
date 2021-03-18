@@ -1,0 +1,83 @@
+BODY {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  background-color:white;
+  text-align: center;
+}
+H1 {
+  font-size: 24px;
+}
+
+#colorTurn {
+  font-size: 18px;
+}
+
+#grid {
+  margin: 20px auto;
+  display: table;
+  width: 410px;
+  height: 410px;
+  padding: 0px;
+  border-collapse: collapse;
+  background: #129104;
+  border: 1px solid #0a5e01;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+   border-spacing: 5px 5px;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000000;
+  padding: 4px;
+}
+
+.disc {
+  width: 36px;
+  height: 36px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.congrats-message {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(223, 223, 223, 0.9);
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 10rem;
+  flex-direction: column;
+}
+
+.congrats-message button {
+  font-size: 3rem;
+  background-color: white;
+  border: 1px solid black;
+  padding: .25em .5em;
+  cursor: pointer;
+}
+
+.congrats-message button:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.congrats-message.show {
+  display: flex;
+}
