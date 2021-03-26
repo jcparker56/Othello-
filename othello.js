@@ -101,7 +101,6 @@ function west(row, col) {
       break;
     }
   }
-  console.log("west", x, grid[row][x])
   //brother is at grid(i, col)
   if (x >= 0 && grid[row][x] == player) {
     x++
@@ -238,7 +237,7 @@ function southE(row, col) {
 
 
 
-resetButton.addEventListener('click', refreshGrid)
+resetButton.addEventListener('click', refreshBoard)
 
 function selectCell(row, col) {
   console.log('selectCell:' + row + ',' + col)
@@ -253,12 +252,12 @@ function selectCell(row, col) {
   flankMove(row, col)
   endgame()
   player = otherPlayer()
-  refreshGrid();
+  refreshBoard();
 }
 
 
 
-function refreshGrid() {
+function refreshBoard() {
   for (var row = 0; row < 8; row++) {
     for (var col = 0; col < 8; col++) {
       if (grid[row][col] == 0) {
@@ -284,49 +283,36 @@ function flankMove(row, col) {
   southW(row, col)
 }
 
-function count0s() {
-  var count = 0
-  var count1 = 0
-  var count2 = 0
+function tallyscore() {
+  var scores = {
+    0:0,
+    1:0,
+    2:0
+  }
+
   for (var i = 0; i < 8; i++) {
     for (var j = 0; j < 8; j++) {
       if (grid[i][j] == 0) {
-        count++
+        scores[0]++
       }
       if (grid[i][j] == 1) {
-        count1++
+        scores[1]++
       }
       if (grid[i][j] == 2) {
-        count2++
+        scores[2]++
       }
     }
-    return [count, count1, count2]
   }
+
+  return scores
 }
-// function grid0s() {
-//   var cells = []
-//   for (var row = 0; row < 8; row++) {
-//     cells += grid[row]
-//   }
-//   var zeros = cells.filter(cell => cell == 0)
-//   zeros.length
-// }
 
 function endgame() {
   const winningMessageTextElement = document.getElementById('data-congrats-message-text')
-  var count
-  count = count0s()
-  console.log(count)
-  console.log(count1s)
-  console.log(count2s)
-  var count1s = count.filter(white => white == 1)
-  var count2s = count.filter(black => black == 2)
-  if (count1s.length > count2s.length) {
-    winningMessageTextElement.innerText = "White Wins"
-  }
+  var scores = tallyscore()
 
-  if (count == 0) {
-    if (count1s.length > count2s.length) {
+  if (scores[0] == 0) {
+    if (scores[1] > scores[2]) {
       winningMessageTextElement.innerText = "White Wins"
     }
     else
@@ -335,9 +321,4 @@ function endgame() {
   }
 
 
-/*function checkWin() {
-  winner = grid.filter(numbersOnly)
-  use for loop grid sub i, or add rows into single array then filter on that one, or for loop inside for loop 0-7 on each row and collum
-}*/
-
-refreshGrid()
+refreshBoard()
